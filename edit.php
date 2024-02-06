@@ -34,7 +34,7 @@ $data=mysqli_fetch_assoc($select);
         <input type="file" name="photo" value="" />
       </div>
       <div>
-        <button type="submit" name="register" class="loginbtn">Update</button>
+        <button type="submit" name="update" class="loginbtn">Update</button>
       </div>
     
     </form>
@@ -42,14 +42,16 @@ $data=mysqli_fetch_assoc($select);
 </html>
 <?php
 include("connection.php");
-if(isset($_POST['register'])){
-    $name=$_POST['fullName'];
-    $userName=$_POST['userName'];
-    $password=$_POST['password'];
-    $insertQuery="INSERT INTO `$table_name` (fullName, userName, password) VALUES ('$name', '$userName', '$password')";
-    $insert=mysqli_query($conn, $insertQuery);
-    if($insert){
-       header("location:login.php");
+
+if(isset($_POST['update'])){
+    $name_u=$_POST['fullName'];
+    $userName_u=$_POST['userName'];
+    $updateQuery="UPDATE `$table_name` SET `fullName`='$name_u', `userName`='$userName_u' WHERE id='$id'";
+    $update=mysqli_query($conn, $updateQuery);
+    if($update){
+       header("location:list.php");
+    }else{
+        echo "failed update";
     }
 }
 
