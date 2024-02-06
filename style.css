@@ -50,7 +50,7 @@ button {
 }
 th,
 td {
-  padding: 10px;
+  padding: 20px 90px;
 }
 .row {
   display: flex;
@@ -95,4 +95,16 @@ nav a {
 }
 .mt-3 {
   margin-top: 30px;
+}
+.delete_btn {
+  background: red;
+  color: #fff;
+  padding: 7px 20px;
+  border-radius: 7px;
+}
+.edit_btn {
+  background-color: rgb(152, 152, 147);
+  color: #fff;
+  padding: 7px 20px;
+  border-radius: 7px;
 }

@@ -54,7 +54,7 @@ $select=mysqli_query($conn, $selectQuery);
         <td><?php echo $i++;?></td>
             <td><?php echo $row['fullName'] ?></td>
             <td><?php echo $row['userName'] ?></td>
-            <td><a href="edit.php?id= <?php echo $row['id']?>">Edit</a>
+            <td><a class="edit_btn" href="edit.php?id= <?php echo $row['id']?>">Edit</a>
         
         </tr>
   <?php }

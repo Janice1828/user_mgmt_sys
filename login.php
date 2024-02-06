@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Log In</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
   
@@ -17,7 +24,12 @@
       </div>
       <div>
         <label for="">Password</label>
-        <input type="password" name="password" value="" />
+        <div  style="position:relative">
+          <input type="password" name="password" id="password" value="">
+          <button onclick="passwordToggle()" type="button" style="position:absolute; background-color:white; border:0; top:8px; right:10px; padding:0px">
+            <i class="fa-regular fa-eye"></i>
+          </button>
+        </div>
       </div>
       <div>
         <button type="" name="login" class="loginbtn">Login</button>
@@ -56,3 +68,14 @@ if(isset($_POST['login'])){
 }
 
 ?>
+<script>
+let password=document.getElementById("password");
+const passwordToggle=()=>{
+if(password.type==="password"){
+  password.type="text";
+}else{
+  password.type="password";
+}
+  }
+
+</script>

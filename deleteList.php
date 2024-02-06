@@ -55,7 +55,7 @@ $select=mysqli_query($conn, $selectQuery);
             <td><?php echo $row['fullName'] ?></td>
             <td><?php echo $row['userName'] ?></td>
            <td>
-            <a href="delete.php?id=<?php echo $row['id']?>">Delete</a></td>
+            <a class="delete_btn" href="delete.php?id=<?php echo $row['id']?>">Delete</a></td>
         </tr>
   <?php }
    ?>
