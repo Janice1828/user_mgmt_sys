@@ -7,7 +7,6 @@ $data=mysqli_fetch_assoc($select);
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +16,26 @@ $data=mysqli_fetch_assoc($select);
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-  
+<div class="row">
+  <div class="col-2">
+    <div class="p-3">
+      <h3 style="padding-bottom:22px">User Management System</h3>
+      <ul>
+        <li>
+          <a href="dashboard.php">Dashboard</a>
+        </li>
+        <li>
+          <a href="dashboardList.php">View User List</a>
+        </li>
+        <li>
+          <a href=""></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-10">
+ 
+
   <form method="post">
     <h3 class="text-center">Edit</h3>
       <div>
@@ -27,7 +45,7 @@ $data=mysqli_fetch_assoc($select);
 
       <div>
         <label for="">User Name</label>
-        <input type="" name="userName" value="<?php echo $data['fullName']?>" />
+        <input type="" name="userName" value="<?php echo $data['userName']?>" />
       </div>
       <div>
         <label for="">Photo</label>
@@ -38,8 +56,11 @@ $data=mysqli_fetch_assoc($select);
       </div>
     
     </form>
+  </div>
+  </div>
   </body>
 </html>
+
 <?php
 include("connection.php");
 
@@ -49,7 +70,6 @@ if(isset($_POST['update'])){
     $updateQuery="UPDATE `$table_name` SET `fullName`='$name_u', `userName`='$userName_u' WHERE id='$id'";
     $update=mysqli_query($conn, $updateQuery);
     if($update){
-       header("location:list.php");
     }else{
         echo "failed update";
     }

@@ -31,16 +31,10 @@ $msg=$_SESSION['msg'];
     ?>
     </div>
 <div class="p-3">
-  
-<p><?php 
-    echo $msg 
-    
-    ?></p>
- <h1 class="text-center mt-3">Welcome to Dashboard  <?php
-echo $userName;
-?> 
+<?php
+include("list.php")
 
-</h1>
+?>
 
 </div>
   </div>
