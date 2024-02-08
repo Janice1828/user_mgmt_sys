@@ -35,7 +35,7 @@
         <button type="" name="login" class="loginbtn">Login</button>
       </div>
       <div>
-        <a href="#">Forgot Password?</a>
+        <a href="password_reset.php">Forgot Password?</a>
       </div>
       <div>
         don't have an account? <a href="registration.php">Register</a>

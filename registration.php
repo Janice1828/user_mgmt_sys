@@ -16,6 +16,11 @@
       </div>
 
       <div>
+        <label for="">Email</label>
+        <input type="" name="email" value="" />
+      </div>
+
+      <div>
         <label for="">User Name</label>
         <input type="" name="userName" value="" />
       </div>
@@ -42,7 +47,8 @@ if(isset($_POST['register'])){
     $name=$_POST['fullName'];
     $userName=$_POST['userName'];
     $password=$_POST['password'];
-    $insertQuery="INSERT INTO `$table_name` (fullName, userName, password) VALUES ('$name', '$userName', '$password')";
+    $email=$_POST['email'];
+    $insertQuery="INSERT INTO `$table_name` (fullName, userName, password, email) VALUES ('$name', '$userName', '$password','$email')";
     $insert=mysqli_query($conn, $insertQuery);
     if($insert){
        header("location:login.php");
