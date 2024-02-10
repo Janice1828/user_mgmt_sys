@@ -23,8 +23,7 @@ session_start();
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;  
-require 'vendor/autoload.php';
-
+require '../vendor/autoload.php';
 function send_password_reset($userName, $email, $token, $id){
 $mail=new PHPMailer(true);
     $mail->isSMTP();
@@ -40,7 +39,7 @@ $mail=new PHPMailer(true);
     $mail->isHTML(true);
     $mail->Subject="Reset Password Notification";
     $email_template="<h2>Password Reset</h2>
-    <a href='http://localhost/college/usermgmtsys/reset_password_form.php?token=$token&email=$email'>Click Me</a>
+    <a href='http://localhost/college/usermgmtsys/system/reset_password_form.php?token=$token&email=$email'>Click Me</a>
     ";
     $mail->Body=$email_template;
     $mail->send();

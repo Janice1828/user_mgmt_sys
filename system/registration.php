@@ -28,10 +28,10 @@
         <label for="">Password</label>
         <input type="password" name="password" value="" required />
       </div>
-      <div>
+      <!-- <div>
         <label for="">Photo</label>
         <input type="file" name="photo" value="" />
-      </div>
+      </div> -->
       <div>
         <button type="submit" name="register" class="loginbtn">Register</button>
       </div>

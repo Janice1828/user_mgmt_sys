@@ -42,10 +42,10 @@ $data=mysqli_fetch_assoc($select);
         <label for="">User Name</label>
         <input type="" name="userName" value="<?php echo $data['userName']?>" />
       </div>
-      <div>
+      <!-- <div>
         <label for="">Photo</label>
         <input type="file" name="photo" value="" />
-      </div>
+      </div> -->
       <div>
         <button type="submit" name="update" class="loginbtn">Update</button>
       </div>

@@ -5,7 +5,7 @@
     <?php include("Navbar.php");?>
   </div>
   <div id="home">
-<img src="../img/five.jpg" alt="Image" width="100%" style="height: 560px;">
+<img src="../img/five.jpg" alt="Image" width="100%" style="height: 600px;">
   </div>
   <div class="container">
     
