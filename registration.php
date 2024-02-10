@@ -48,7 +48,8 @@ if(isset($_POST['register'])){
     $userName=$_POST['userName'];
     $password=$_POST['password'];
     $email=$_POST['email'];
-    $insertQuery="INSERT INTO `$table_name` (fullName, userName, password, email) VALUES ('$name', '$userName', '$password','$email')";
+    $hash_pw=sha1($password);
+    $insertQuery="INSERT INTO `$table_name` (fullName, userName, password, email) VALUES ('$name', '$userName', '$hash_pw','$email')";
     $insert=mysqli_query($conn, $insertQuery);
     if($insert){
        header("location:login.php");

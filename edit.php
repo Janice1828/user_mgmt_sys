@@ -66,6 +66,7 @@ if(isset($_POST['update'])){
     $updateQuery="UPDATE `$table_name` SET `fullName`='$name_u', `userName`='$userName_u' WHERE id='$id'";
     $update=mysqli_query($conn, $updateQuery);
     if($update){
+      header("location:editList.php");
     }else{
         echo "failed update";
     }
