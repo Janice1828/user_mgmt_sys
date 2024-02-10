@@ -1,22 +1,25 @@
 <?php @include("../system/header.php"); ?>
 
-<div class="container">
-  <div>
+<div>
+  <div  style="position:sticky; top:0; z-index:1;">
     <?php include("Navbar.php");?>
   </div>
   <div id="home">
-<img src="../img/two.jpg" alt="Image" width="100%" style="height: 530px;">
+<img src="../img/five.jpg" alt="Image" width="100%" style="height: 560px;">
   </div>
+  <div class="container">
+    
+ 
   <div id="aboutus">
     
   <?php include("aboutus.php");?>
   
   </div>
-  <div id="services">
+  <div id="services" style="margin-bottom: 50px;">
   <?php include("services.php");?>
     
   </div>
-  
+  </div>
 </div>
 
 <?php @include("../system/footer.php"); ?>
@@ -47,5 +50,12 @@ nav a{
 }
 .gap-3{
     gap:30px;
+}
+.container{
+    padding:0px 60px;
+}
+h1{
+    text-align:center;
+    padding:40px 0px 20px 0px;
 }
 </style>
