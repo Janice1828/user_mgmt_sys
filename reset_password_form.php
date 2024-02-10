@@ -15,6 +15,7 @@ include("connection.php");
 if(isset($_POST['changepassword'])){
  $password=$_POST['password'];
  $confirm_password=$_POST['confirmpassword'];
+ $hash_pw=sha1($confirm_password);
 if($password===$confirm_password){
  $update_query="UPDATE user SET password='$confirm_password' WHERE id='$id' ";
  $sql=mysqli_query($conn, $update_query);

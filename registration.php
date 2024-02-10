@@ -12,21 +12,21 @@
     <h3 class="text-center">Registration</h3>
       <div>
         <label for="">Full Name</label>
-        <input type="" name="fullName" value="" />
+        <input type="" name="fullName" value="" required />
       </div>
 
       <div>
         <label for="">Email</label>
-        <input type="" name="email" value="" />
+        <input type="" name="email" value="" required />
       </div>
 
       <div>
         <label for="">User Name</label>
-        <input type="" name="userName" value="" />
+        <input type="" name="userName" value="" required />
       </div>
       <div>
         <label for="">Password</label>
-        <input type="password" name="password" value="" />
+        <input type="password" name="password" value="" required />
       </div>
       <div>
         <label for="">Photo</label>
@@ -48,8 +48,8 @@ if(isset($_POST['register'])){
     $userName=$_POST['userName'];
     $password=$_POST['password'];
     $email=$_POST['email'];
-    $hash_pw=sha1($password);
-    $insertQuery="INSERT INTO `$table_name` (fullName, userName, password, email) VALUES ('$name', '$userName', '$hash_pw','$email')";
+    
+    $insertQuery="INSERT INTO `$table_name` (fullName, userName, password, email) VALUES ('$name', '$userName', '$password','$email')";
     $insert=mysqli_query($conn, $insertQuery);
     if($insert){
        header("location:login.php");

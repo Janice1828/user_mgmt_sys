@@ -17,6 +17,13 @@
             <i class="fa-regular fa-eye"></i>
           </button>
         </div>
+        <span>
+          <?php 
+          if(isset($err)){
+            echo $err;
+          }
+          ?>
+        </span>
       </div>
       <div>
         <button type="" name="login" class="loginbtn">Login</button>
@@ -37,7 +44,6 @@
 include("connection.php");
 if(isset($_POST['login'])){
   session_start();
-  $username=$_POST['userName'];
   $em=$_POST['email'];
   $pass=$_POST['password'];
   $selectQuery="SELECT * FROM $table_name WHERE email='$em' && password='$pass'";
@@ -57,7 +63,11 @@ if(isset($_POST['login'])){
     $_SESSION['msg']="Logged In Successfully!";
 
     header("location:dashboard.php");
-  }}
+  }else{
+    $err="Credentials did not matched";
+  }
+
+}
 }
 
 ?>

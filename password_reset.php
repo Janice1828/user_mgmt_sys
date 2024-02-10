@@ -1,6 +1,11 @@
+<?php
+@include("header.php");
+?>
+
+
 <form method="post">
     <div>
-        <h5>Reset Password</h5>
+        <h3>Reset Password</h3>
     </div>
     <div>
     <label for="">Email Address</label>    
@@ -10,6 +15,9 @@
         <button type="submit" name="password_reset_link" class="">Send Password Reset Link</button>
     </div>
 </form>
+<?php
+@include("footer.php");
+?>
 <?php
 session_start();
 use PHPMailer\PHPMailer\PHPMailer;
