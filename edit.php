@@ -7,15 +7,10 @@ $data=mysqli_fetch_assoc($select);
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<?php 
+
+@include("header.php");
+?>
 <div class="row">
   <div class="col-2">
     <div class="p-3">
@@ -58,9 +53,10 @@ $data=mysqli_fetch_assoc($select);
     </form>
   </div>
   </div>
-  </body>
-</html>
+  <?php 
 
+@include("footer.php");
+?>
 <?php
 include("connection.php");
 

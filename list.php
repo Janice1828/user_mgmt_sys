@@ -3,6 +3,7 @@ include("connection.php");
 $selectQuery="SELECT * from $table_name";
 $select=mysqli_query($conn, $selectQuery);
 ?>
+
 <table border="1" cellspacing="0">
     <thead>
 <tr>    
